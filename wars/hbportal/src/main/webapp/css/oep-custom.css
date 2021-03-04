@@ -1,0 +1,260 @@
+.text2 {
+	color: #fff !important;
+	margin-bottom: 0;
+	margin-top: 0;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.text1 {
+	color: #fff !important;
+	margin-bottom: 3px;
+	margin-top: 0;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.portlet-borderless-container {
+	padding: 0px !important;
+}
+
+.noidung {
+	background: #fff none repeat scroll 0 0;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+	margin: 0 !important;
+	padding: 8px !important;
+}
+
+.badge-red {
+	vertical-align: top;
+	background: #FF0004 !important;
+	font-weight: normal;
+}
+
+.btn-trang {
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+	border: medium none !important;
+	color: #fff !important;
+	padding: 0 10px 0 0 !important;
+}
+
+/* .navbar {
+	position: relative;
+	min-height: 40px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+} */
+
+.navbar-nav>li>a {
+	/* padding-top: 25px;
+	padding-bottom: 10px; */
+	line-height: 20px;
+}
+
+.H100 {
+	height: auto !important;
+	min-height: 300px;
+}
+
+.dropdown-menu>li>a {
+	clear: both;
+	color: #333;
+	display: block;
+	font-weight: normal;
+	line-height: 1.42857;
+	padding: 3px 12px;
+	text-align: justify !important;
+	white-space: nowrap !important;
+}
+
+.aui .pager li>a, .aui .pager li>span {
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 0;
+	display: inline-block;
+	padding: 1px 7px;
+}
+
+.taglib-page-iterator .lfr-pagination-buttons {
+	width: auto !important;
+}
+
+.aui h4, .aui .h4, .aui h5, .aui .h5, .aui h6, .aui .h6 {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.aui h3, .aui .h3 {
+	font-size: 18px;
+}
+
+.aui h1, .aui .h1, .aui h2, .aui .h2, .aui h3, .aui .h3 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.aui .modal-header::before, .aui .modal-header::after {
+	content: " ";
+	display: table;
+}
+
+.aui *::before, .aui *::after {
+	box-sizing: border-box;
+}
+
+.aui .modal-header::after {
+	clear: both;
+}
+
+.aui .modal-header::before, .aui .modal-header::after {
+	content: " ";
+	display: table;
+}
+
+.aui *::before, .aui *::after {
+	box-sizing: border-box;
+}
+
+.modal-header {
+	border-bottom: 1px solid #e5e5e5;
+	padding: 6px !important;
+}
+
+.aui .nav>li>a {
+	display: block;
+	padding: 15px 10px;
+	position: relative;
+}
+
+ul.oep-tab li a.active {
+	padding-bottom: 7px;
+}
+
+ul.oep-tab li a:HOVER {
+	padding-bottom: 7px;
+}
+
+div.text-footer {
+	float: left;
+	text-align: left;
+	color: #fff;
+	font-size: 13px;
+	margin-bottom: 0;
+	text-transform: none;
+	line-height: 19px;
+	padding: 0px;
+}
+
+div.text-footer  p {
+	margin: 0 0 2px;
+	color: white;
+	font-family: "Roboto-Condensed-Regular";
+}
+
+div.text-footer h4 {
+	font-size: 16px;
+	color: white;
+	font-family: "Roboto-Condensed-Regular";
+}
+
+.aui input[type=text].field, .aui input[type=password].field, .aui .aui-field-select,
+	.aui textarea {
+	border-radius: 0px;
+	background-image: inherit;
+}
+
+.aui .nav>li>a {
+	display: block;
+	padding: 15px 6px;
+	position: relative;
+}
+
+.oep-menu-count {
+	margin-right: 0px !important;
+}
+
+.oep-calendar {
+	background: url(../images/oep/ui/icon-calender-inp.png) no-repeat right
+		7px !important;
+}
+
+table.oep-table-form tr td {
+	padding-top: 2px;
+}
+
+.aui .modal .modal-body {
+	overflow-y: hidden;
+}
+
+.textTO {
+	font-family: "Roboto-Condensed-Regular";
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+input:read-only {
+	background: #f7f7f7 !important;
+}
+
+.bgxanhtim {
+	background: #333;
+	border-top: 5px solid #0D43DA
+}
+
+.bacninh-header {
+	width: 100%;
+	min-height: 55px;
+	background: url(../images/pattern-bg.png) no-repeat center center;
+	background-color: #22467f;
+}
+
+.ui-widget-content {
+	border: 1px solid #dddddd;
+	background: aliceblue !important;
+	color: #362b36;
+}
+
+.ui-timepicker-table td a {
+	display: grid !important;
+	padding: 0.2em 0.3em 0.2em 0.5em;
+	width: 2.2em;
+	cursor: pointer;
+	text-align: right;
+	text-decoration: none;
+}
+
+.H100 {
+	height: auto !important;
+	min-height: 500px !important;
+}
+
+.bootstrap-select:not ([class*=col-] ):not ([class*=form-control] ):not
+	(.input-group-btn ) {
+	width: 100%;
+}
+
+/* CSS dockbar */
+.aui .navbar-default .navbar-nav>li>a, .aui .navbar .navbar-nav>li>a,
+	.aui .navbar-default .nav>li>a, .aui .navbar .nav>li>a {
+	color: #c8d8ff;
+}
+
+.aui .dockbar {
+	background: #193a8d;
+	margin-bottom: 0px;
+}
+
+.aui .navbar .nav>li>a:hover {
+	color: #fff !important;
+	background-color: #0b2d82;
+}
+
+.aui .navbar .nav>.open>a {
+	color: #fff !important;
+	background-color: #0b2d82;
+}
+
+.aui .navbar-nav>li>.dropdown-menu, .aui .nav>li>.dropdown-menu>li {
+	height: auto;
+}
+/* END CSS dockbar */

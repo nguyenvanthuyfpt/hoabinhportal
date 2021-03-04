@@ -1,0 +1,13 @@
+Bundle-Name: cms-core-service
+Bundle-SymbolicName: vn.gov.hoabinh.service
+Bundle-Version: 1.0.0
+Import-Package: *;resolution:=optional
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+Export-Package: \
+	vn.gov.hoabinh.exception,\
+	vn.gov.hoabinh.model,\
+	vn.gov.hoabinh.exception,\
+	vn.gov.hoabinh.service,\
+	vn.gov.hoabinh.util,\
+	vn.gov.hoabinh.model.impl

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server AGENT_PORT="29998" auto-publish-setting="1" auto-publish-time="0" hostname="localhost" id="HBP" id-set="true" name="HBP" runtime-id="HBP" server-type="com.liferay.ide.server.portal" server-type-id="com.liferay.ide.server.portal" start-timeout="900" stop-timeout="300" timestamp="164">
+    <list key="modules"/>
+  </server>
+</servers>

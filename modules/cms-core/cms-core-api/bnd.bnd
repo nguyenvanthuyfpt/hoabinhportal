@@ -1,0 +1,10 @@
+Bundle-Name: cms-core-api
+Bundle-SymbolicName: vn.gov.hoabinh.api
+Import-Package: *;resolution:=optional
+Bundle-Version: 1.0.0
+Export-Package:\
+	vn.gov.hoabinh.exception,\
+	vn.gov.hoabinh.model,\
+	vn.gov.hoabinh.service,\
+	vn.gov.hoabinh.service.persistence
+-includeresource: META-INF/service.xml=../cms-core-service/service.xml

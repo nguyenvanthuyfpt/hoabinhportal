@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//src/main/resources/META-INF/resources/adv/view_type.jsp=UTF-8
+encoding//src/main/resources/META-INF/resources/cms/edit_article.jsp=UTF-8
+encoding//src/main/resources/META-INF/resources/cms/publish_article.jsp=UTF-8
+encoding//src/main/resources/META-INF/resources/cmsview/article_by_sticky.jsp=UTF-8
+encoding//src/main/resources/META-INF/resources/cmsview/article_detail.jsp=UTF-8
+encoding//src/main/resources/META-INF/resources/contactview/view.jsp=UTF-8
+encoding//src/main/resources/META-INF/resources/datetime/view.jsp=UTF-8
+encoding//src/main/resources/META-INF/resources/faq/view.jsp=UTF-8
+encoding//src/main/resources/META-INF/resources/faqsend/view.jsp=UTF-8
+encoding//src/main/resources/META-INF/resources/legal/view_document.jsp=UTF-8
+encoding//src/main/resources/META-INF/resources/legal/view_draft_document.jsp=UTF-8
+encoding//src/main/resources/META-INF/resources/linkview/view.jsp=UTF-8
+encoding//src/main/resources/META-INF/resources/sitemap/view.jsp=UTF-8
+encoding//src/main/resources/content/Language_vi.properties=UTF-8
+encoding/<project>=UTF-8

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+    <sql id="vn.gov.hoabinh.service.persistence.impl.VcmsArticleFinderImpl.findArticlePublishByCategory">
+        <![CDATA[          
+            SELECT a.* FROM vcmsarticle a 
+            INNER JOIN 
+            	vcmscarelation ca ON a.articleid=ca.articleid 
+			WHERE 
+				(a.status = ?) AND 
+				(ca.categoryid = ?) 
+			ORDER BY a.publisheddate DESC    
+        ]]>
+    </sql>
+</custom-sql>

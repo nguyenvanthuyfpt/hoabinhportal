@@ -1,0 +1,734 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="vn.gov.hoabinh.model.AdvItem">
+		<field name="itemId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="expriedDate" type="Date" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="url" type="String" />
+		<field name="isTargetBlank" type="boolean" />
+		<field name="txtMouseOver" type="String" />
+		<field name="folderId" type="long" />
+		<field name="status" type="boolean" />
+		<field name="typeId" type="long" />
+	</model>
+	<model name="vn.gov.hoabinh.model.AdvType">
+		<field name="typeId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.Attachment">
+		<field name="attachmentId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="entryId" type="long" />
+		<field name="entryClass" type="String" />
+		<field name="fileEntryId" type="long" />
+		<field name="folderId" type="long" />
+		<field name="fileName" type="String" />
+		<field name="imageId" type="long" />
+		<field name="extension" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.Clip">
+		<field name="id" type="String" />
+		<field name="clipTypeId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="url" type="String" />
+		<field name="name" type="String" />
+		<field name="title" type="String" />
+		<field name="image" type="String" />
+		<field name="description" type="String" />
+		<field name="active" type="boolean" />
+		<field name="language" type="String" />
+		<field name="hitcount" type="int" />
+		<field name="hitcountview" type="int" />
+	</model>
+	<model name="vn.gov.hoabinh.model.ClipType">
+		<field name="id" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="title" type="String" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="active" type="boolean" />
+		<field name="language" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.DataConvert">
+		<field name="id" type="long" />
+		<field name="folderId" type="long" />
+		<field name="dataId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="fileName" type="String" />
+		<field name="url" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.FAQAnswer">
+		<field name="id" type="long" />
+		<field name="questionid" type="long" />
+		<field name="content" type="String" />
+		<field name="answerOrder" type="int" />
+		<field name="answeredByUser" type="String" />
+		<field name="answeredDate" type="Date" />
+		<field name="modifiedByUser" type="String" />
+		<field name="language" type="String" />
+		<field name="modifiedDate" type="Date" />
+		<field name="approved" type="boolean" />
+		<field name="approvedByUser" type="String" />
+		<field name="approvedDate" type="Date" />
+		<field name="userId" type="long" />
+		<field name="attachName" type="String" />
+		<field name="folderId" type="long" />
+	</model>
+	<model name="vn.gov.hoabinh.model.FAQCategory">
+		<field name="id" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="language" type="String" />
+		<field name="parent" type="long" />
+		<field name="catorder" type="int" />
+		<field name="catlevel" type="int" />
+		<field name="image" type="String" />
+		<field name="createdByUser" type="String" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedByUser" type="String" />
+		<field name="modifiedDate" type="Date" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+	</model>
+	<model name="vn.gov.hoabinh.model.FAQCategoryQuestion">
+		<field name="id" type="long" />
+		<field name="questionId" type="long" />
+		<field name="categoryId" type="long" />
+	</model>
+	<model name="vn.gov.hoabinh.model.FAQComment">
+		<field name="id" type="long" />
+		<field name="answerid" type="long" />
+		<field name="content" type="String" />
+		<field name="commName" type="String" />
+		<field name="commEmail" type="String" />
+		<field name="approved" type="boolean" />
+		<field name="approveByUser" type="String" />
+		<field name="approvedDate" type="Date" />
+		<field name="commDate" type="Date" />
+		<field name="userId" type="long" />
+	</model>
+	<model name="vn.gov.hoabinh.model.FAQQuestion">
+		<field name="id" type="long" />
+		<field name="title" type="String" />
+		<field name="content" type="String" />
+		<field name="language" type="String" />
+		<field name="questionOrder" type="int" />
+		<field name="sentDate" type="Date" />
+		<field name="sentByUser" type="String" />
+		<field name="senderEmail" type="String" />
+		<field name="questionType" type="String" />
+		<field name="modifiedByUser" type="String" />
+		<field name="modifiedDate" type="Date" />
+		<field name="hitCount" type="int" />
+		<field name="approved" type="boolean" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="categoryId" type="long" />
+	</model>
+	<model name="vn.gov.hoabinh.model.LinkGroup">
+		<field name="linkgroupId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="position" type="int" />
+	</model>
+	<model name="vn.gov.hoabinh.model.Links">
+		<field name="linkId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="linkgroupId" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="url" type="String" />
+		<field name="position" type="int" />
+		<field name="image" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsArticle">
+		<field name="articleId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdByUser" type="String" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedByUser" type="String" />
+		<field name="modifiedDate" type="Date" />
+		<field name="approvedByUser" type="String" />
+		<field name="approvedDate" type="Date" />
+		<field name="publishedByUser" type="String" />
+		<field name="publishedDate" type="Date" />
+		<field name="status" type="long" />
+		<field name="title" type="String" />
+		<field name="lead" type="String" />
+		<field name="content" type="String" />
+		<field name="version" type="double" />
+		<field name="hasImage" type="boolean" />
+		<field name="imageTitle" type="String" />
+		<field name="image" type="String" />
+		<field name="author" type="String" />
+		<field name="source" type="String" />
+		<field name="language" type="String" />
+		<field name="userHit" type="int" />
+		<field name="discussible" type="boolean" />
+		<field name="hasAttachment" type="boolean" />
+		<field name="hasPoll" type="boolean" />
+		<field name="pollId" type="String" />
+		<field name="effectiveDate" type="Date" />
+		<field name="expireDate" type="Date" />
+		<field name="sticky" type="boolean" />
+		<field name="stickyNeverExpired" type="boolean" />
+		<field name="stickyExpireDate" type="Date" />
+		<field name="categoryId" type="String" />
+		<field name="soundLink" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsArticleRating">
+		<field name="Id" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="articleId" type="long" />
+		<field name="rating" type="int" />
+		<field name="sessionId" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsArticleStatus">
+		<field name="statusId" type="long" />
+		<field name="articleId" type="String" />
+		<field name="categoryId" type="String" />
+		<field name="createdDate" type="Date" />
+		<field name="createdByUser" type="String" />
+		<field name="active" type="boolean" />
+		<field name="articleVersionId" type="long" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsArticleType">
+		<field name="typeId" type="long" />
+		<field name="articleId" type="String" />
+		<field name="position" type="int" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsArticleVersion">
+		<field name="articleVersionId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="articleId" type="String" />
+		<field name="createdByUser" type="String" />
+		<field name="createdDate" type="Date" />
+		<field name="typeIds" type="String" />
+		<field name="status" type="long" />
+		<field name="versionName" type="String" />
+		<field name="title" type="String" />
+		<field name="lead" type="String" />
+		<field name="content" type="String" />
+		<field name="hasImage" type="boolean" />
+		<field name="imageTitle" type="String" />
+		<field name="image" type="String" />
+		<field name="language" type="String" />
+		<field name="userHit" type="int" />
+		<field name="author" type="String" />
+		<field name="source" type="String" />
+		<field name="discussible" type="boolean" />
+		<field name="hasAttachment" type="boolean" />
+		<field name="hasPoll" type="boolean" />
+		<field name="pollId" type="String" />
+		<field name="publishedByUser" type="String" />
+		<field name="modifiedByUser" type="String" />
+		<field name="modifiedDate" type="Date" />
+		<field name="publishedDate" type="Date" />
+		<field name="effectiveDate" type="Date" />
+		<field name="expireDate" type="Date" />
+		<field name="stickyExpireDate" type="Date" />
+		<field name="sticky" type="boolean" />
+		<field name="stickyNeverExpired" type="boolean" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsAttachedMessage">
+		<field name="messageId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="createdByUser" type="String" />
+		<field name="articleId" type="String" />
+		<field name="content" type="String" />
+		<field name="readMessage" type="boolean" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsCARelation">
+		<field name="categoryId" type="String" />
+		<field name="articleId" type="String" />
+		<field name="createdDate" type="Date" />
+		<field name="createdByUser" type="String" />
+		<field name="status" type="long" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsCategory">
+		<field name="categoryId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="createdByUser" type="String" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedByUser" type="String" />
+		<field name="portionId" type="String" />
+		<field name="parentId" type="String" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="anchored" type="boolean" />
+		<field name="href" type="String" />
+		<field name="language" type="String" />
+		<field name="hasImage" type="boolean" />
+		<field name="image" type="String" />
+		<field name="position" type="int" />
+		<field name="userHit" type="int" />
+		<field name="rssable" type="boolean" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsCURelation">
+		<field name="categoryId" type="String" />
+		<field name="userId" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsDiscussion">
+		<field name="discussionId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="visitorName" type="String" />
+		<field name="visitorEmail" type="String" />
+		<field name="visitorPhone" type="String" />
+		<field name="postedDate" type="Date" />
+		<field name="approved" type="boolean" />
+		<field name="approvedByUser" type="String" />
+		<field name="approvedDate" type="Date" />
+		<field name="articleId" type="String" />
+		<field name="title" type="String" />
+		<field name="content" type="String" />
+		<field name="language" type="String" />
+		<field name="hasAttachment" type="boolean" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsLogger">
+		<field name="loggerId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="entryId" type="String" />
+		<field name="createdDate" type="Date" />
+		<field name="createdByUser" type="String" />
+		<field name="classEntry" type="String" />
+		<field name="content" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsPARelation">
+		<field name="portionId" type="String" />
+		<field name="articleId" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsPortion">
+		<field name="portionId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="createdByUser" type="String" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedByUser" type="String" />
+		<field name="code" type="String" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="categorizable" type="boolean" />
+		<field name="language" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsStatus">
+		<field name="statusId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="createdByUser" type="String" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedByUser" type="String" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="cssClass" type="String" />
+		<field name="textColor" type="String" />
+		<field name="position" type="int" />
+		<field name="isPrimary" type="boolean" />
+		<field name="active" type="boolean" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsTARelation">
+		<field name="threadId" type="String" />
+		<field name="articleId" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsThread">
+		<field name="threadId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="createdByUser" type="String" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedByUser" type="String" />
+		<field name="title" type="String" />
+		<field name="description" type="String" />
+		<field name="hasImage" type="boolean" />
+		<field name="image" type="String" />
+		<field name="language" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VcmsType">
+		<field name="typeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="createdByUser" type="String" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedByUser" type="String" />
+		<field name="code" type="String" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="language" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VContact">
+		<field name="id" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="guestName" type="String" />
+		<field name="email" type="String" />
+		<field name="title" type="String" />
+		<field name="address" type="String" />
+		<field name="phone" type="String" />
+		<field name="fax" type="String" />
+		<field name="content" type="String" />
+		<field name="hasAttach" type="boolean" />
+		<field name="status" type="int" />
+	</model>
+	<model name="vn.gov.hoabinh.model.vdocDocument">
+		<field name="docId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="language" type="String" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdByUser" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedByUser" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="approvedByUser" type="long" />
+		<field name="approvedDate" type="Date" />
+		<field name="publishedByUser" type="long" />
+		<field name="publishedDate" type="Date" />
+		<field name="promulDate" type="Date" />
+		<field name="effectivedDate" type="Date" />
+		<field name="expiredDate" type="Date" />
+		<field name="replaceDoc" type="String" />
+		<field name="title" type="String" />
+		<field name="content" type="String" />
+		<field name="process" type="String" />
+		<field name="base" type="String" />
+		<field name="timeProcess" type="String" />
+		<field name="cost" type="String" />
+		<field name="requireDoc" type="String" />
+		<field name="result" type="String" />
+		<field name="objects" type="String" />
+		<field name="style" type="String" />
+		<field name="position" type="int" />
+		<field name="note" type="String" />
+		<field name="executeOrg" type="String" />
+		<field name="userHit" type="int" />
+		<field name="statusDoc" type="int" />
+		<field name="typeDoc" type="int" />
+		<field name="hasService" type="boolean" />
+		<field name="hasAttachment" type="boolean" />
+		<field name="fieldId" type="String" />
+		<field name="orgRels" type="String" />
+		<field name="fieldRels" type="String" />
+		<field name="levels" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.vdocDORel">
+		<field name="docId" type="String" />
+		<field name="orgId" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.vdocField">
+		<field name="fieldId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="createdByUser" type="long" />
+		<field name="modifiedByUser" type="long" />
+		<field name="parentId" type="String" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="language" type="String" />
+		<field name="statusField" type="boolean" />
+		<field name="position" type="int" />
+		<field name="listparent" type="String" />
+		<field name="levels" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.vdocFieldLevelRel">
+		<field name="fieldId" type="String" />
+		<field name="levelId" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.vdocLevel">
+		<field name="levelId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="language" type="String" />
+		<field name="position" type="int" />
+	</model>
+	<model name="vn.gov.hoabinh.model.vdocLogger">
+		<field name="loggerId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="createdByUser" type="long" />
+		<field name="entryId" type="String" />
+		<field name="className" type="String" />
+		<field name="content" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.vdocOrg">
+		<field name="orgId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="createdByUser" type="long" />
+		<field name="modifiedByUser" type="long" />
+		<field name="parentId" type="String" />
+		<field name="code" type="String" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="address" type="String" />
+		<field name="phone" type="String" />
+		<field name="fax" type="String" />
+		<field name="language" type="String" />
+		<field name="statusOrg" type="boolean" />
+		<field name="position" type="int" />
+		<field name="listparent" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VisitorTracker">
+		<field name="visitorId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="expiredDate" type="Date" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalAttachedMessage">
+		<field name="messageId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="createdByUser" type="long" />
+		<field name="articleId" type="String" />
+		<field name="content" type="String" />
+		<field name="readMessage" type="boolean" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalDDRel">
+		<field name="departmentId" type="long" />
+		<field name="docId" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalDFRel">
+		<field name="fieldId" type="String" />
+		<field name="docId" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalDocument">
+		<field name="docId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdByUser" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedByUser" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="approvedByUser" type="long" />
+		<field name="approvedDate" type="Date" />
+		<field name="forwardedByUser" type="long" />
+		<field name="forwardedDate" type="Date" />
+		<field name="publishedByUser" type="long" />
+		<field name="publishedDate" type="Date" />
+		<field name="symbol" type="String" />
+		<field name="num" type="String" />
+		<field name="promulDate" type="Date" />
+		<field name="effectivedDate" type="Date" />
+		<field name="expiredDate" type="Date" />
+		<field name="replaceDoc" type="String" />
+		<field name="summary" type="String" />
+		<field name="content" type="String" />
+		<field name="language" type="String" />
+		<field name="userHit" type="int" />
+		<field name="statusDoc" type="int" />
+		<field name="hasAttachment" type="boolean" />
+		<field name="typeDocId" type="String" />
+		<field name="fieldId" type="String" />
+		<field name="orgId" type="String" />
+		<field name="orgRels" type="String" />
+		<field name="signerRels" type="String" />
+		<field name="fieldRels" type="String" />
+		<field name="numRels" type="String" />
+		<field name="docCode" type="String" />
+		<field name="departmentRels" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalDraftDocument">
+		<field name="draftId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdByUser" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedByUser" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="approvedByUser" type="long" />
+		<field name="approvedDate" type="Date" />
+		<field name="publishedByUser" type="long" />
+		<field name="publishedDate" type="Date" />
+		<field name="title" type="String" />
+		<field name="expiredDate" type="Date" />
+		<field name="language" type="String" />
+		<field name="content" type="String" />
+		<field name="typeId" type="String" />
+		<field name="fieldId" type="String" />
+		<field name="hasAttachment" type="boolean" />
+		<field name="draftLevel" type="int" />
+		<field name="docCode" type="String" />
+		<field name="statusDraft" type="int" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalDSRel">
+		<field name="sigId" type="String" />
+		<field name="docId" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalDURel">
+		<field name="departmentId" type="long" />
+		<field name="userid" type="long" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalField">
+		<field name="fieldId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="createdByUser" type="long" />
+		<field name="modifiedByUser" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="language" type="String" />
+		<field name="statusField" type="boolean" />
+		<field name="rssable" type="boolean" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalFORel">
+		<field name="fieldId" type="String" />
+		<field name="orgId" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalFTRel">
+		<field name="fieldId" type="String" />
+		<field name="typeId" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalLogger">
+		<field name="loggerId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="createdByUser" type="long" />
+		<field name="content" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalOrg">
+		<field name="orgId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="createdByUser" type="long" />
+		<field name="modifiedByUser" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="parentId" type="String" />
+		<field name="language" type="String" />
+		<field name="statusOrg" type="boolean" />
+		<field name="rssable" type="boolean" />
+		<field name="position" type="int" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalSigner">
+		<field name="sigId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="createdByUser" type="long" />
+		<field name="modifiedByUser" type="long" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="language" type="String" />
+		<field name="statusSigner" type="boolean" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalSuggestDocument">
+		<field name="sugId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedByUser" type="long" />
+		<field name="approved" type="boolean" />
+		<field name="approvedByUser" type="long" />
+		<field name="approvedDate" type="Date" />
+		<field name="title" type="String" />
+		<field name="content" type="String" />
+		<field name="language" type="String" />
+		<field name="visitorName" type="String" />
+		<field name="visitorEmail" type="String" />
+		<field name="visitorTel" type="String" />
+		<field name="visitorAddress" type="String" />
+		<field name="draftId" type="String" />
+		<field name="hasAttachment" type="boolean" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalTags">
+		<field name="tagId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="statusTags" type="boolean" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalTDRel">
+		<field name="docId" type="String" />
+		<field name="tagId" type="String" />
+	</model>
+	<model name="vn.gov.hoabinh.model.VLegalType">
+		<field name="typeId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="createdByUser" type="long" />
+		<field name="modifiedByUser" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="language" type="String" />
+		<field name="statusType" type="boolean" />
+		<field name="rssable" type="boolean" />
+		<field name="position" type="int" />
+	</model>
+</model-hints>

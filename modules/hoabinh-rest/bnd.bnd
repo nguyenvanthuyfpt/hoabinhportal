@@ -1,0 +1,12 @@
+Bundle-Name: hoabinh-rest
+Bundle-SymbolicName: vn.gov.hoabinh.rest
+Import-Package: *;resolution:=optional
+Bundle-Version: 1.0.0
+ConfigurationPath: /configuration
+Include-Resource: configuration=src/main/resources/configuration
+Export-Package: \
+	vn.gov.hoabinh.exception,\
+	vn.gov.hoabinh.model,\
+	vn.gov.hoabinh.service,\
+	vn.gov.hoabinh.model.impl,\
+	vn.gov.hoabinh.service.persistence

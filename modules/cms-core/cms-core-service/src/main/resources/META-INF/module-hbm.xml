@@ -1,0 +1,903 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="vn.gov.hoabinh.model.AdvItem" />
+	<import class="vn.gov.hoabinh.model.AdvType" />
+	<import class="vn.gov.hoabinh.model.Attachment" />
+	<import class="vn.gov.hoabinh.model.Clip" />
+	<import class="vn.gov.hoabinh.model.ClipType" />
+	<import class="vn.gov.hoabinh.model.DataConvert" />
+	<import class="vn.gov.hoabinh.model.FAQAnswer" />
+	<import class="vn.gov.hoabinh.model.FAQCategory" />
+	<import class="vn.gov.hoabinh.model.FAQCategoryQuestion" />
+	<import class="vn.gov.hoabinh.model.FAQComment" />
+	<import class="vn.gov.hoabinh.model.FAQQuestion" />
+	<import class="vn.gov.hoabinh.model.LinkGroup" />
+	<import class="vn.gov.hoabinh.model.Links" />
+	<import class="vn.gov.hoabinh.model.VcmsArticle" />
+	<import class="vn.gov.hoabinh.model.VcmsArticleRating" />
+	<import class="vn.gov.hoabinh.model.VcmsArticleStatus" />
+	<import class="vn.gov.hoabinh.model.VcmsArticleType" />
+	<import class="vn.gov.hoabinh.model.VcmsArticleVersion" />
+	<import class="vn.gov.hoabinh.model.VcmsAttachedMessage" />
+	<import class="vn.gov.hoabinh.model.VcmsCARelation" />
+	<import class="vn.gov.hoabinh.model.VcmsCategory" />
+	<import class="vn.gov.hoabinh.model.VcmsCURelation" />
+	<import class="vn.gov.hoabinh.model.VcmsDiscussion" />
+	<import class="vn.gov.hoabinh.model.VcmsLogger" />
+	<import class="vn.gov.hoabinh.model.VcmsPARelation" />
+	<import class="vn.gov.hoabinh.model.VcmsPortion" />
+	<import class="vn.gov.hoabinh.model.VcmsStatus" />
+	<import class="vn.gov.hoabinh.model.VcmsTARelation" />
+	<import class="vn.gov.hoabinh.model.VcmsThread" />
+	<import class="vn.gov.hoabinh.model.VcmsType" />
+	<import class="vn.gov.hoabinh.model.VContact" />
+	<import class="vn.gov.hoabinh.model.vdocDocument" />
+	<import class="vn.gov.hoabinh.model.vdocDORel" />
+	<import class="vn.gov.hoabinh.model.vdocField" />
+	<import class="vn.gov.hoabinh.model.vdocFieldLevelRel" />
+	<import class="vn.gov.hoabinh.model.vdocLevel" />
+	<import class="vn.gov.hoabinh.model.vdocLogger" />
+	<import class="vn.gov.hoabinh.model.vdocOrg" />
+	<import class="vn.gov.hoabinh.model.VisitorTracker" />
+	<import class="vn.gov.hoabinh.model.VLegalAttachedMessage" />
+	<import class="vn.gov.hoabinh.model.VLegalDDRel" />
+	<import class="vn.gov.hoabinh.model.VLegalDFRel" />
+	<import class="vn.gov.hoabinh.model.VLegalDocument" />
+	<import class="vn.gov.hoabinh.model.VLegalDraftDocument" />
+	<import class="vn.gov.hoabinh.model.VLegalDSRel" />
+	<import class="vn.gov.hoabinh.model.VLegalDURel" />
+	<import class="vn.gov.hoabinh.model.VLegalField" />
+	<import class="vn.gov.hoabinh.model.VLegalFORel" />
+	<import class="vn.gov.hoabinh.model.VLegalFTRel" />
+	<import class="vn.gov.hoabinh.model.VLegalLogger" />
+	<import class="vn.gov.hoabinh.model.VLegalOrg" />
+	<import class="vn.gov.hoabinh.model.VLegalSigner" />
+	<import class="vn.gov.hoabinh.model.VLegalSuggestDocument" />
+	<import class="vn.gov.hoabinh.model.VLegalTags" />
+	<import class="vn.gov.hoabinh.model.VLegalTDRel" />
+	<import class="vn.gov.hoabinh.model.VLegalType" />
+	<class name="vn.gov.hoabinh.model.impl.AdvItemImpl" table="AdvItem">
+		<id name="itemId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="expriedDate" type="org.hibernate.type.TimestampType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="url" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="isTargetBlank" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="txtMouseOver" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="folderId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="typeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.AdvTypeImpl" table="AdvType">
+		<id name="typeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.AttachmentImpl" table="Attachment">
+		<id name="attachmentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entryClass" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="folderId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fileName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="imageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="extension" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.ClipImpl" table="Clip">
+		<id column="id_" name="id" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="clipTypeId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="url" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="image" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="active_" name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hitcount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="hitcountview" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.ClipTypeImpl" table="ClipType">
+		<id column="id_" name="id" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="active_" name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.DataConvertImpl" table="DataConvert">
+		<id column="id_" name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="folderId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="dataId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="fileName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="url" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.FAQAnswerImpl" table="FAQAnswer">
+		<id column="id_" name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="questionid" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answerOrder" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="answeredByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answeredDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="approved" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="approvedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="approvedDate" type="org.hibernate.type.TimestampType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="attachName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="folderId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.FAQCategoryImpl" table="FAQCategory">
+		<id column="id_" name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="parent" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="catorder" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="catlevel" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="image" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.FAQCategoryQuestionImpl" table="FAQCategoryQuestion">
+		<id column="id_" name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="questionId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.FAQCommentImpl" table="FAQComment">
+		<id column="id_" name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="answerid" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="commName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="commEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="approved" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="approveByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="approvedDate" type="org.hibernate.type.TimestampType" />
+		<property name="commDate" type="org.hibernate.type.TimestampType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.FAQQuestionImpl" table="FAQQuestion">
+		<id column="id_" name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="questionOrder" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="sentDate" type="org.hibernate.type.TimestampType" />
+		<property name="sentByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="senderEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="questionType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="hitCount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="approved" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.LinkGroupImpl" table="LinkGroup">
+		<id name="linkgroupId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="position" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.LinksImpl" table="Links">
+		<id name="linkId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="linkgroupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="url" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="position" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="image" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsArticleImpl" table="VcmsArticle">
+		<id name="articleId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="approvedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="approvedDate" type="org.hibernate.type.TimestampType" />
+		<property name="publishedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="publishedDate" type="org.hibernate.type.TimestampType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lead" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="version" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="hasImage" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="imageTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="image" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="author" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="source" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userHit" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="discussible" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="hasAttachment" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="hasPoll" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="pollId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="effectiveDate" type="org.hibernate.type.TimestampType" />
+		<property name="expireDate" type="org.hibernate.type.TimestampType" />
+		<property name="sticky" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="stickyNeverExpired" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="stickyExpireDate" type="org.hibernate.type.TimestampType" />
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="soundLink" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsArticleRatingImpl" table="VcmsArticleRating">
+		<id name="Id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="articleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="rating" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="sessionId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsArticleStatusImpl" table="VcmsArticleStatus">
+		<composite-id class="vn.gov.hoabinh.service.persistence.VcmsArticleStatusPK" name="primaryKey">
+			<key-property name="statusId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+			<key-property name="articleId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+			<key-property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="active_" name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="articleVersionId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsArticleTypeImpl" table="VcmsArticleType">
+		<composite-id class="vn.gov.hoabinh.service.persistence.VcmsArticleTypePK" name="primaryKey">
+			<key-property name="typeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+			<key-property name="articleId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+		<property name="position" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsArticleVersionImpl" table="VcmsArticleVersion">
+		<id name="articleVersionId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="articleId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="typeIds" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="versionName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lead" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hasImage" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="imageTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="image" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userHit" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="author" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="source" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="discussible" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="hasAttachment" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="hasPoll" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="pollId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="publishedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="publishedDate" type="org.hibernate.type.TimestampType" />
+		<property name="effectiveDate" type="org.hibernate.type.TimestampType" />
+		<property name="expireDate" type="org.hibernate.type.TimestampType" />
+		<property name="stickyExpireDate" type="org.hibernate.type.TimestampType" />
+		<property name="sticky" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="stickyNeverExpired" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsAttachedMessageImpl" table="VcmsAttachedMessage">
+		<id name="messageId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="articleId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="readMessage" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsCARelationImpl" table="VcmsCARelation">
+		<composite-id class="vn.gov.hoabinh.service.persistence.VcmsCARelationPK" name="primaryKey">
+			<key-property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+			<key-property name="articleId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsCategoryImpl" table="VcmsCategory">
+		<id name="categoryId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="portionId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="parentId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="anchored" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="href" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hasImage" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="image" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="position" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userHit" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rssable" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsCURelationImpl" table="VcmsCURelation">
+		<composite-id class="vn.gov.hoabinh.service.persistence.VcmsCURelationPK" name="primaryKey">
+			<key-property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+			<key-property name="userId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsDiscussionImpl" table="VcmsDiscussion">
+		<id name="discussionId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="visitorName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="visitorEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="visitorPhone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="postedDate" type="org.hibernate.type.TimestampType" />
+		<property name="approved" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="approvedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="approvedDate" type="org.hibernate.type.TimestampType" />
+		<property name="articleId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hasAttachment" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsLoggerImpl" table="VcmsLogger">
+		<id name="loggerId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entryId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="classEntry" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsPARelationImpl" table="VcmsPARelation">
+		<composite-id class="vn.gov.hoabinh.service.persistence.VcmsPARelationPK" name="primaryKey">
+			<key-property name="portionId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+			<key-property name="articleId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsPortionImpl" table="VcmsPortion">
+		<id name="portionId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="code_" name="code" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="categorizable" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsStatusImpl" table="VcmsStatus">
+		<id name="statusId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cssClass" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="textColor" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="position" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isPrimary" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property column="active_" name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsTARelationImpl" table="VcmsTARelation">
+		<composite-id class="vn.gov.hoabinh.service.persistence.VcmsTARelationPK" name="primaryKey">
+			<key-property name="threadId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+			<key-property name="articleId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsThreadImpl" table="VcmsThread">
+		<id name="threadId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hasImage" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="image" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VcmsTypeImpl" table="VcmsType">
+		<id name="typeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="code_" name="code" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VContactImpl" table="VContact">
+		<id column="id_" name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="guestName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fax" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hasAttach" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.vdocDocumentImpl" table="vdocDocument">
+		<id name="docId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="approvedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="approvedDate" type="org.hibernate.type.TimestampType" />
+		<property name="publishedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="publishedDate" type="org.hibernate.type.TimestampType" />
+		<property name="promulDate" type="org.hibernate.type.TimestampType" />
+		<property name="effectivedDate" type="org.hibernate.type.TimestampType" />
+		<property name="expiredDate" type="org.hibernate.type.TimestampType" />
+		<property name="replaceDoc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="process" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="base" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="timeProcess" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cost" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="requireDoc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="result" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="objects" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="style" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="position" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="note" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="executeOrg" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userHit" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusDoc" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="typeDoc" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="hasService" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="hasAttachment" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="fieldId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="orgRels" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fieldRels" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="levels" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.vdocDORelImpl" table="vdocDORel">
+		<composite-id class="vn.gov.hoabinh.service.persistence.vdocDORelPK" name="primaryKey">
+			<key-property name="docId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+			<key-property name="orgId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.vdocFieldImpl" table="vdocField">
+		<id name="fieldId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="parentId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusField" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="position" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="listparent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="levels" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.vdocFieldLevelRelImpl" table="vdocFieldLevelRel">
+		<composite-id class="vn.gov.hoabinh.service.persistence.vdocFieldLevelRelPK" name="primaryKey">
+			<key-property name="fieldId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+			<key-property name="levelId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.vdocLevelImpl" table="vdocLevel">
+		<id name="levelId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="position" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.vdocLoggerImpl" table="vdocLogger">
+		<id name="loggerId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entryId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="className" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.vdocOrgImpl" table="vdocOrg">
+		<id name="orgId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="parentId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="code_" name="code" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fax" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusOrg" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="position" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="listparent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VisitorTrackerImpl" table="VisitorTracker">
+		<id name="visitorId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="expiredDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalAttachedMessageImpl" table="VLegalAttachedMessage">
+		<id name="messageId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="articleId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="readMessage" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalDDRelImpl" table="VLegalDDRel">
+		<composite-id class="vn.gov.hoabinh.service.persistence.VLegalDDRelPK" name="primaryKey">
+			<key-property name="departmentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+			<key-property name="docId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalDFRelImpl" table="VLegalDFRel">
+		<composite-id class="vn.gov.hoabinh.service.persistence.VLegalDFRelPK" name="primaryKey">
+			<key-property name="fieldId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+			<key-property name="docId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalDocumentImpl" table="VLegalDocument">
+		<id name="docId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="approvedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="approvedDate" type="org.hibernate.type.TimestampType" />
+		<property name="forwardedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="forwardedDate" type="org.hibernate.type.TimestampType" />
+		<property name="publishedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="publishedDate" type="org.hibernate.type.TimestampType" />
+		<property name="symbol" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="num" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="promulDate" type="org.hibernate.type.TimestampType" />
+		<property name="effectivedDate" type="org.hibernate.type.TimestampType" />
+		<property name="expiredDate" type="org.hibernate.type.TimestampType" />
+		<property name="replaceDoc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="summary" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userHit" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusDoc" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="hasAttachment" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="typeDocId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fieldId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="orgId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="orgRels" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="signerRels" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fieldRels" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="numRels" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="docCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="departmentRels" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalDraftDocumentImpl" table="VLegalDraftDocument">
+		<id name="draftId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="approvedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="approvedDate" type="org.hibernate.type.TimestampType" />
+		<property name="publishedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="publishedDate" type="org.hibernate.type.TimestampType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="expiredDate" type="org.hibernate.type.TimestampType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="typeId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fieldId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hasAttachment" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="draftLevel" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="docCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusDraft" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalDSRelImpl" table="VLegalDSRel">
+		<composite-id class="vn.gov.hoabinh.service.persistence.VLegalDSRelPK" name="primaryKey">
+			<key-property name="sigId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+			<key-property name="docId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalDURelImpl" table="VLegalDURel">
+		<composite-id class="vn.gov.hoabinh.service.persistence.VLegalDURelPK" name="primaryKey">
+			<key-property name="departmentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+			<key-property name="userid" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		</composite-id>
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalFieldImpl" table="VLegalField">
+		<id name="fieldId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusField" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="rssable" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalFORelImpl" table="VLegalFORel">
+		<composite-id class="vn.gov.hoabinh.service.persistence.VLegalFORelPK" name="primaryKey">
+			<key-property name="fieldId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+			<key-property name="orgId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalFTRelImpl" table="VLegalFTRel">
+		<composite-id class="vn.gov.hoabinh.service.persistence.VLegalFTRelPK" name="primaryKey">
+			<key-property name="fieldId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+			<key-property name="typeId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalLoggerImpl" table="VLegalLogger">
+		<id name="loggerId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalOrgImpl" table="VLegalOrg">
+		<id name="orgId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="parentId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusOrg" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="rssable" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="position" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalSignerImpl" table="VLegalSigner">
+		<id name="sigId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="firstName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusSigner" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalSuggestDocumentImpl" table="VLegalSuggestDocument">
+		<id name="sugId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="approved" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="approvedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="approvedDate" type="org.hibernate.type.TimestampType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="visitorName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="visitorEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="visitorTel" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="visitorAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="draftId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hasAttachment" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalTagsImpl" table="VLegalTags">
+		<id name="tagId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusTags" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalTDRelImpl" table="VLegalTDRel">
+		<composite-id class="vn.gov.hoabinh.service.persistence.VLegalTDRelPK" name="primaryKey">
+			<key-property name="docId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+			<key-property name="tagId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		</composite-id>
+	</class>
+	<class name="vn.gov.hoabinh.model.impl.VLegalTypeImpl" table="VLegalType">
+		<id name="typeId" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedByUser" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="language" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusType" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="rssable" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="position" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+</hibernate-mapping>

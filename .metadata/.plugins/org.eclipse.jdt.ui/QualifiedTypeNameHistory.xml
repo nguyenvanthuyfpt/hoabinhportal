@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.ParamUtil"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Long"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.model.Attachment"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.util.DataConvertUtil"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.model.VcmsCategory"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.service.VcmsCategoryLocalServiceUtil"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.model.VcmsPortion"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.service.VcmsPortionLocalServiceUtil"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.StringUtil"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.ListUtil"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.util.StringUtils"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.model.VcmsArticle"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.model.VLegalDraftDocument"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.service.AttachmentLocalServiceUtil"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.model.VLegalSuggestDocument"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.util.PortalConstant"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.json.JSONArray"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.Validator"/>
+<fullyQualifiedTypeName name="aQute.bnd.annotation.component.Component"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.util.UploadFileUtils"/>
+<fullyQualifiedTypeName name="vn.gov.hoabinh.util.UploadFileUtilsBak"/>
+</qualifiedTypeNameHistroy>

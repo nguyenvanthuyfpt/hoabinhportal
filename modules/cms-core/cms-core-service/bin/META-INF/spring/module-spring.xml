@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="vn.gov.hoabinh.service.impl.AdvItemLocalServiceImpl" id="vn.gov.hoabinh.service.AdvItemLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.AdvItemPersistenceImpl" id="vn.gov.hoabinh.service.persistence.AdvItemPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.AdvTypeLocalServiceImpl" id="vn.gov.hoabinh.service.AdvTypeLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.AdvTypePersistenceImpl" id="vn.gov.hoabinh.service.persistence.AdvTypePersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.AttachmentLocalServiceImpl" id="vn.gov.hoabinh.service.AttachmentLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.AttachmentPersistenceImpl" id="vn.gov.hoabinh.service.persistence.AttachmentPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.ClipLocalServiceImpl" id="vn.gov.hoabinh.service.ClipLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.ClipPersistenceImpl" id="vn.gov.hoabinh.service.persistence.ClipPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.ClipTypeLocalServiceImpl" id="vn.gov.hoabinh.service.ClipTypeLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.ClipTypePersistenceImpl" id="vn.gov.hoabinh.service.persistence.ClipTypePersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.DataConvertLocalServiceImpl" id="vn.gov.hoabinh.service.DataConvertLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.DataConvertPersistenceImpl" id="vn.gov.hoabinh.service.persistence.DataConvertPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.FAQAnswerLocalServiceImpl" id="vn.gov.hoabinh.service.FAQAnswerLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.FAQAnswerPersistenceImpl" id="vn.gov.hoabinh.service.persistence.FAQAnswerPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.FAQCategoryLocalServiceImpl" id="vn.gov.hoabinh.service.FAQCategoryLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.FAQCategoryPersistenceImpl" id="vn.gov.hoabinh.service.persistence.FAQCategoryPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.FAQCategoryQuestionLocalServiceImpl" id="vn.gov.hoabinh.service.FAQCategoryQuestionLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.FAQCategoryQuestionPersistenceImpl" id="vn.gov.hoabinh.service.persistence.FAQCategoryQuestionPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.FAQCommentLocalServiceImpl" id="vn.gov.hoabinh.service.FAQCommentLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.FAQCommentPersistenceImpl" id="vn.gov.hoabinh.service.persistence.FAQCommentPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.FAQQuestionLocalServiceImpl" id="vn.gov.hoabinh.service.FAQQuestionLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.FAQQuestionPersistenceImpl" id="vn.gov.hoabinh.service.persistence.FAQQuestionPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.LinkGroupLocalServiceImpl" id="vn.gov.hoabinh.service.LinkGroupLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.LinkGroupPersistenceImpl" id="vn.gov.hoabinh.service.persistence.LinkGroupPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.LinksLocalServiceImpl" id="vn.gov.hoabinh.service.LinksLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.LinksPersistenceImpl" id="vn.gov.hoabinh.service.persistence.LinksPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsArticleLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsArticleLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsArticlePersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsArticlePersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsArticleRatingLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsArticleRatingLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsArticleRatingPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsArticleRatingPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsArticleStatusLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsArticleStatusLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsArticleStatusPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsArticleStatusPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsArticleTypeLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsArticleTypeLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsArticleTypePersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsArticleTypePersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsArticleVersionLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsArticleVersionLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsArticleVersionPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsArticleVersionPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsAttachedMessageLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsAttachedMessageLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsAttachedMessagePersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsAttachedMessagePersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsCARelationLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsCARelationLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsCARelationPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsCARelationPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsCategoryLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsCategoryLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsCategoryPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsCategoryPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsCURelationLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsCURelationLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsCURelationPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsCURelationPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsDiscussionLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsDiscussionLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsDiscussionPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsDiscussionPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsLoggerLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsLoggerLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsLoggerPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsLoggerPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsPARelationLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsPARelationLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsPARelationPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsPARelationPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsPortionLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsPortionLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsPortionPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsPortionPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsStatusLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsStatusLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsStatusPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsStatusPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsTARelationLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsTARelationLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsTARelationPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsTARelationPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsThreadLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsThreadLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsThreadPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsThreadPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VcmsTypeLocalServiceImpl" id="vn.gov.hoabinh.service.VcmsTypeLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VcmsTypePersistenceImpl" id="vn.gov.hoabinh.service.persistence.VcmsTypePersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VContactLocalServiceImpl" id="vn.gov.hoabinh.service.VContactLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VContactPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VContactPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.vdocDocumentLocalServiceImpl" id="vn.gov.hoabinh.service.vdocDocumentLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.vdocDocumentPersistenceImpl" id="vn.gov.hoabinh.service.persistence.vdocDocumentPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.vdocDORelLocalServiceImpl" id="vn.gov.hoabinh.service.vdocDORelLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.vdocDORelPersistenceImpl" id="vn.gov.hoabinh.service.persistence.vdocDORelPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.vdocFieldLocalServiceImpl" id="vn.gov.hoabinh.service.vdocFieldLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.vdocFieldPersistenceImpl" id="vn.gov.hoabinh.service.persistence.vdocFieldPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.vdocFieldLevelRelLocalServiceImpl" id="vn.gov.hoabinh.service.vdocFieldLevelRelLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.vdocFieldLevelRelPersistenceImpl" id="vn.gov.hoabinh.service.persistence.vdocFieldLevelRelPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.vdocLevelLocalServiceImpl" id="vn.gov.hoabinh.service.vdocLevelLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.vdocLevelPersistenceImpl" id="vn.gov.hoabinh.service.persistence.vdocLevelPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.vdocLoggerLocalServiceImpl" id="vn.gov.hoabinh.service.vdocLoggerLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.vdocLoggerPersistenceImpl" id="vn.gov.hoabinh.service.persistence.vdocLoggerPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.vdocOrgLocalServiceImpl" id="vn.gov.hoabinh.service.vdocOrgLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.vdocOrgPersistenceImpl" id="vn.gov.hoabinh.service.persistence.vdocOrgPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VisitorTrackerLocalServiceImpl" id="vn.gov.hoabinh.service.VisitorTrackerLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VisitorTrackerPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VisitorTrackerPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalAttachedMessageLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalAttachedMessageLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalAttachedMessagePersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalAttachedMessagePersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalDDRelLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalDDRelLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalDDRelPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalDDRelPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalDFRelLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalDFRelLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalDFRelPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalDFRelPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalDocumentLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalDocumentLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalDocumentPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalDocumentPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalDraftDocumentLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalDraftDocumentLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalDraftDocumentPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalDraftDocumentPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalDSRelLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalDSRelLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalDSRelPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalDSRelPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalDURelLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalDURelLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalDURelPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalDURelPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalFieldLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalFieldLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalFieldPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalFieldPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalFORelLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalFORelLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalFORelPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalFORelPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalFTRelLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalFTRelLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalFTRelPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalFTRelPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalLoggerLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalLoggerLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalLoggerPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalLoggerPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalOrgLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalOrgLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalOrgPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalOrgPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalSignerLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalSignerLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalSignerPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalSignerPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalSuggestDocumentLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalSuggestDocumentLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalSuggestDocumentPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalSuggestDocumentPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalTagsLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalTagsLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalTagsPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalTagsPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalTDRelLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalTDRelLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalTDRelPersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalTDRelPersistence" parent="basePersistence" />
+	<bean class="vn.gov.hoabinh.service.impl.VLegalTypeLocalServiceImpl" id="vn.gov.hoabinh.service.VLegalTypeLocalService" />
+	<bean class="vn.gov.hoabinh.service.persistence.impl.VLegalTypePersistenceImpl" id="vn.gov.hoabinh.service.persistence.VLegalTypePersistence" parent="basePersistence" />
+</beans>

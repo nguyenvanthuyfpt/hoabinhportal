@@ -1,0 +1,2 @@
+contextPath=/hoabinh-rest
+authVerifierProperties=auth.verifier.PortalSessionAuthVerifier.urls.includes=*

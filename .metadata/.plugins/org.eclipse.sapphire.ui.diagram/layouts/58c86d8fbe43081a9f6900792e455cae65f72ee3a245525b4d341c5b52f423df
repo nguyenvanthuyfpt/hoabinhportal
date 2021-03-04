@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram-geometry>
+    <node>
+        <id>Entity#Attachment#0</id>
+        <bounds x="36" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VcmsType#1</id>
+        <bounds x="173" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VcmsPortion#2</id>
+        <bounds x="310" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VcmsCategory#3</id>
+        <bounds x="36" y="36"/>
+    </node>
+    <node>
+        <id>Entity#VcmsArticle#4</id>
+        <bounds x="310" y="651"/>
+    </node>
+    <node>
+        <id>Entity#VcmsStatus#5</id>
+        <bounds x="447" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VcmsArticleVersion#6</id>
+        <bounds x="173" y="914"/>
+    </node>
+    <node>
+        <id>Entity#VcmsArticleStatus#7</id>
+        <bounds x="36" y="914"/>
+    </node>
+    <node>
+        <id>Entity#VcmsArticleType#8</id>
+        <bounds x="584" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VcmsAttachedMessage#9</id>
+        <bounds x="173" y="389"/>
+    </node>
+    <node>
+        <id>Entity#VcmsThread#10</id>
+        <bounds x="721" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VcmsDiscussion#11</id>
+        <bounds x="173" y="564"/>
+    </node>
+    <node>
+        <id>Entity#VcmsPARelation#12</id>
+        <bounds x="173" y="36"/>
+    </node>
+    <node>
+        <id>Entity#VcmsCARelation#13</id>
+        <bounds x="858" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VcmsTARelation#14</id>
+        <bounds x="995" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VcmsCURelation#15</id>
+        <bounds x="447" y="476"/>
+    </node>
+    <node>
+        <id>Entity#VcmsLogger#16</id>
+        <bounds x="1132" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#AdvType#17</id>
+        <bounds x="1269" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#AdvItem#18</id>
+        <bounds x="173" y="1100"/>
+    </node>
+    <node>
+        <id>Entity#VContact#19</id>
+        <bounds x="1406" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#FAQCategory#20</id>
+        <bounds x="1543" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#FAQQuestion#21</id>
+        <bounds x="310" y="301"/>
+    </node>
+    <node>
+        <id>Entity#FAQCategoryQuestion#22</id>
+        <bounds x="310" y="476"/>
+    </node>
+    <node>
+        <id>Entity#FAQAnswer#23</id>
+        <bounds x="1680" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#FAQComment#24</id>
+        <bounds x="1817" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VLegalDocument#25</id>
+        <bounds x="173" y="1450"/>
+    </node>
+    <node>
+        <id>Entity#VLegalField#26</id>
+        <bounds x="1954" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VLegalType#27</id>
+        <bounds x="310" y="1159"/>
+    </node>
+    <node>
+        <id>Entity#VLegalDraftDocument#28</id>
+        <bounds x="173" y="1275"/>
+    </node>
+    <node>
+        <id>Entity#VLegalSuggestDocument#29</id>
+        <bounds x="36" y="1275"/>
+    </node>
+    <node>
+        <id>Entity#VLegalAttachedMessage#30</id>
+        <bounds x="173" y="739"/>
+    </node>
+    <node>
+        <id>Entity#VLegalOrg#31</id>
+        <bounds x="2091" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VLegalSigner#32</id>
+        <bounds x="2228" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VLegalTags#33</id>
+        <bounds x="2365" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VLegalFORel#34</id>
+        <bounds x="2502" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VLegalFTRel#35</id>
+        <bounds x="2639" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VLegalDFRel#36</id>
+        <bounds x="2776" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VLegalDDRel#37</id>
+        <bounds x="2913" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VLegalDURel#38</id>
+        <bounds x="3050" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VLegalDSRel#39</id>
+        <bounds x="3187" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VLegalTDRel#40</id>
+        <bounds x="3324" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VLegalLogger#41</id>
+        <bounds x="3461" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#LinkGroup#42</id>
+        <bounds x="173" y="212"/>
+    </node>
+    <node>
+        <id>Entity#Links#43</id>
+        <bounds x="36" y="212"/>
+    </node>
+    <node>
+        <id>Entity#ClipType#44</id>
+        <bounds x="3598" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#Clip#45</id>
+        <bounds x="3735" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#DataConvert#46</id>
+        <bounds x="3872" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#vdocDocument#47</id>
+        <bounds x="173" y="1625"/>
+    </node>
+    <node>
+        <id>Entity#vdocField#48</id>
+        <bounds x="4009" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#vdocOrg#49</id>
+        <bounds x="310" y="1334"/>
+    </node>
+    <node>
+        <id>Entity#vdocDORel#50</id>
+        <bounds x="4146" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#vdocLevel#51</id>
+        <bounds x="4283" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#vdocFieldLevelRel#52</id>
+        <bounds x="310" y="1509"/>
+    </node>
+    <node>
+        <id>Entity#vdocLogger#53</id>
+        <bounds x="4420" y="1800"/>
+    </node>
+    <node>
+        <id>Entity#VisitorTracker#54</id>
+        <bounds x="4557" y="1800"/>
+    </node>
+</diagram-geometry>
