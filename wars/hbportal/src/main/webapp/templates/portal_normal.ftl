@@ -8,11 +8,12 @@
 	<title>${the_title} - ${company_name}</title>
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
-
+	
 	<@liferay_util["include"] page=top_head_include />
 	<@liferay.js file_name="${themeDisplay.getPathThemeJavaScript()}/social-buttons-share.js" />
 	<@liferay.js file_name="${themeDisplay.getPathThemeJavaScript()}/owl.carousel.min.js" />
-	<@liferay.js file_name="${themeDisplay.getPathThemeJavaScript()}/customs.js" />
+	<@liferay.js file_name="${themeDisplay.getPathThemeJavaScript()}/customs.js" />	
+	
 </head>
 
 <body class="${css_class}">
