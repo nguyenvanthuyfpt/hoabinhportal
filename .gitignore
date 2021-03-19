@@ -1,0 +1,3 @@
+.gradle/
+bundles/osgi/modules/vn.gov.hoabinh.rest.jar
+*.class
