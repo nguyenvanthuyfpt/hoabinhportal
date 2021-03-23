@@ -73,12 +73,15 @@
 		strCategory = Validator.isNotNull(article.getCategoryId()) ? StringUtil.split(article.getCategoryId(),"#") : null;
 		if (Validator.isNotNull(strCategory)) {
 			arrCategoryIds = StringUtils.removeInvalid(strCategory);
-			for (int i=0; i<arrCategoryIds.length; i++) {
-				category = VcmsCategoryLocalServiceUtil.getCategory(arrCategoryIds[i]);
-				categoryId = category.getCategoryId();
-				if (Validator.isNotNull(category)) {
-					portionId = category.getPortionId();
-					break;
+			for (int i=0; i<arrCategoryIds.length; i++) {				
+				try { 
+					category = VcmsCategoryLocalServiceUtil.getCategory(arrCategoryIds[i]);
+					categoryId = category.getCategoryId();
+					if (Validator.isNotNull(category)) {
+						portionId = category.getPortionId();
+						break;
+					}
+				} catch (Exception ex) {
 				}
 			}
 		}
@@ -103,18 +106,23 @@
 			for (int i = 0; i < arrCatId.length; i++) {
 				String catId = arrCatId[i];
 				if (!"".equals(catId)) {
-					category = VcmsCategoryLocalServiceUtil.getCategory(catId);
-					String portId = category.getPortionId();
-					if (!"0".equals(portId)) {
-						VcmsPortion portion = VcmsPortionLocalServiceUtil.getPortion(portId);
-						if (inc == 0) {
-							curPortionName = portion.getName();
-						} else {
-							curPortionName += (!curPortionId.equals(portion.getPortionId())) ? ", " + portion.getName() : "";
+					try {
+						category = VcmsCategoryLocalServiceUtil.getCategory(catId);
+						String portId = category.getPortionId();
+						if (!"0".equals(portId)) {
+							VcmsPortion portion = VcmsPortionLocalServiceUtil.getPortion(portId);
+							if (inc == 0) {
+								curPortionName = portion.getName();
+							} else {
+								curPortionName += (!curPortionId.equals(portion.getPortionId())) ? ", " + portion.getName() : "";
+							}
+							inc++;
+							curPortionId = portion.getPortionId();
 						}
-						inc++;
-						curPortionId = portion.getPortionId();
+					} catch (Exception ex) {
+						
 					}
+					
 				}
 			}
 		}

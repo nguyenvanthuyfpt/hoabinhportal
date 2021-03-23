@@ -36,6 +36,14 @@
 <%@page import="com.liferay.asset.kernel.service.*"%>
 <%@page import="com.liferay.asset.kernel.model.*"%>
 
+<%@page import="com.liferay.document.library.kernel.service.DLAppServiceUtil"%>
+<%@page import="com.liferay.document.library.kernel.service.DLAppLocalServiceUtil"%>
+<%@page import="com.liferay.document.library.kernel.service.DLFileEntryLocalServiceUtil"%>
+<%@page import="com.liferay.document.library.kernel.model.DLFileEntry"%>
+<%@page import="com.liferay.document.library.kernel.util.DLUtil" %>
+<%@page import="com.liferay.portal.kernel.repository.model.FileEntry" %>
+<%@page import="vn.gov.hoabinh.service.AttachmentLocalServiceUtil"%>
+
 <%@page import="javax.portlet.PortletMode"%>
 <%@page import="javax.portlet.WindowState"%>
 <%@page import="javax.portlet.PortletRequest" %>

@@ -82,13 +82,6 @@
 	}
 	
 	function stopAudio(){
-		//audio.onended = function() {
-			//alert('STOP');
-			//var a = [];
-			//audio = new Audio(a[0]);
-			//audio.pause();
-		//};
-		
 		$.each($('audio'), function () {
 		    this.pause();
 		    this.currentTime = 0;
@@ -170,6 +163,25 @@
 	</div>
 	<% } %> --%>
 	
+	<div class="attachment">
+		<%if(article.getHasAttachment()){ 			
+		%>
+		<ul>
+			<% List<Attachment> listAttachment = AttachmentLocalServiceUtil.getAttachments(Long.parseLong(article.getArticleId()), VcmsArticle.class);
+				for(Attachment attachment:listAttachment) {
+					long fileEntryId = attachment.getFileEntryId();
+					FileEntry fileEntry = DLAppServiceUtil.getFileEntry(fileEntryId);
+					String url = DLUtil.getDownloadURL(fileEntry, fileEntry.getFileVersion(), themeDisplay, "");
+			%>
+				<li><a href="<%=url%>">
+					<img alt="<%=attachment.getFileName() %>" src="<%=PortalConstant.SRC_IMAGE+"/file_system/small/"+fileEntry.getExtension()+".png"%>" />
+					<%=attachment.getFileName() %></a>
+				</li>
+			<% } %>
+		</ul>
+		<%} %>
+	</div>
+	
 	<div class="text-center">
 		<a href="#" onclick="window.history.go(-1); return false;"><liferay-ui:icon image="back" message="back"/></a>
          <a href="#" onclick="window.print();"><liferay-ui:icon image="print" message="print"/></a>
@@ -245,14 +257,6 @@
 </portlet:resourceURL>
 
 <script>
-	<%-- YUI().use('aui-audio', function(Y) {
-		var audio = new Y.Audio({
-			boundingBox : '#<portlet:namespace/>myAudio',
-			url : '<%=soundLink%>',
-			oggUrl : 'https://alloyui.com/audio/zelda.ogg'
-		}).render();
-	}); --%>
-	
 	YUI().use(
 	  'aui-rating',
 	  'node',

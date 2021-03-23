@@ -586,17 +586,25 @@ public class ArticleActionCommand extends BaseMVCActionCommand {
 			for (int i = 0; i < arrCatId.length; i++) {
 				String catId = arrCatId[i];
 				if (!"".equals(catId)) {
-					VcmsCategory category = VcmsCategoryLocalServiceUtil.getCategory(catId);
-					String portionId = category.getPortionId();
-					if (!"0".equals(portionId)) {
-						VcmsPortion portion = VcmsPortionLocalServiceUtil.getPortion(portionId);
-						if (inc == 0) {
-							curPortion = portion.getName();
-						} else {
-							curPortion += (!curPortionId.equals(portion.getPortionId())) ? ", " + portion.getName() : "";
+					VcmsCategory category = null;
+					try {
+						category = VcmsCategoryLocalServiceUtil.getCategory(catId);
+					} catch (Exception e) {
+						// TODO: handle exception
+					}
+					
+					if (Validator.isNotNull(category)) {
+						String portionId = category.getPortionId();
+						if (!"0".equals(portionId)) {
+							VcmsPortion portion = VcmsPortionLocalServiceUtil.getPortion(portionId);
+							if (inc == 0) {
+								curPortion = portion.getName();
+							} else {
+								curPortion += (!curPortionId.equals(portion.getPortionId())) ? ", " + portion.getName() : "";
+							}
+							inc++;
+							curPortionId = portion.getPortionId();
 						}
-						inc++;
-						curPortionId = portion.getPortionId();
 					}
 				}
 			}
